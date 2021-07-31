@@ -1,0 +1,51 @@
+.header {
+    
+    background-color: #e7e7e7;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.notes-section {
+    display: flex;
+    .notes-list {
+        max-height: calc(100vh - 50px);
+        height:  calc(100vh - 50px);
+        overflow-y: auto;
+        border-right: 1px solid black;
+
+        .note {
+            border-bottom: 1px solid grey;
+
+            .note-heading {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+        }
+    }
+    @media(max-width: 797px) {
+        flex-direction: column-reverse;
+    }
+    
+    .note-form {
+        height: calc(100vh - 50px);
+        box-sizing: border-box;
+        padding: 5%;
+        .text-input {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 10px;
+            }
+        }
+
+        .btn {
+            float: right;
+            margin: 10px;
+        }
+    }
+}
